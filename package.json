@@ -1,0 +1,63 @@
+{
+  "name": "diplom-ajs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+		"start": "webpack-dev-server --mode development",
+		"build": "webpack --mode production",
+		"lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+		"lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+		"test": "jest",
+		"coverage": "jest --coverage",
+		"preshow:coverage": "npm run coverage",
+		"show:coverage": "live-server coverage/lcov-report",
+		"preshow:dist": "npm run build",
+		"show:dist": "live-server dist",
+		"build tsc": "tsc",
+		"watch": "tsc -w",
+		"deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NastyaKatyushkina/diplom-ajs.git"
+  },
+  "author": "Anastasia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NastyaKatyushkina/diplom-ajs/issues"
+  },
+  "homepage": "https://github.com/NastyaKatyushkina/diplom-ajs#readme",
+  "devDependencies": {
+		"@babel/cli": "^7.18.10",
+		"@babel/core": "^7.19.1",
+		"@babel/eslint-parser": "^7.19.1",
+		"@babel/preset-env": "^7.19.1",
+		"@jest/globals": "^29.0.3",
+		"@types/jest": "^29.1.2",
+		"@typescript-eslint/eslint-plugin": "^5.39.0",
+		"@typescript-eslint/parser": "^5.39.0",
+		"babel-eslint": "^10.1.0",
+		"babel-jest": "^29.0.3",
+		"babel-loader": "^8.2.5",
+		"css-loader": "^6.7.1",
+		"eslint": "^8.25.0",
+		"eslint-config-airbnb-typescript": "^17.0.0",
+		"eslint-plugin-import": "^2.26.0",
+		"gh-pages": "^4.0.0",
+		"html-loader": "^4.1.0",
+		"html-webpack-plugin": "^5.5.0",
+		"jest": "^29.0.3",
+		"live-server": "^1.1.0",
+		"mini-css-extract-plugin": "^2.6.1",
+		"ts-jest": "^29.0.3",
+		"ts-loader": "^9.4.1",
+		"typescript": "^4.8.4",
+		"webpack": "^5.74.0",
+		"webpack-cli": "^4.10.0",
+		"webpack-dev-server": "^4.11.0"
+	},
+	"dependencies": {
+		"core-js": "^3.25.2"
+	}
+}
