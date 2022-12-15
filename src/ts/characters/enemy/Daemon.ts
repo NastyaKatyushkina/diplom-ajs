@@ -5,7 +5,7 @@ export default class Daemon extends Character {
 	defence = 10;
 	attackRange = 4;
 	movementRange = 1;
-	constructor(level: number, type = 'daemon') {
-		super(level, type);
+	constructor(level: number) {
+		super(level, 'daemon');
 	}
 }

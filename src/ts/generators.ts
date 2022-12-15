@@ -2,6 +2,7 @@ import Team from './Team';
 import Character from './Character';
 import PositionedCharacter from './PositionedCharacter';
 import Bowman from './characters/ally/Bowman';
+import Daemon from './characters/enemy/Daemon';
 
 export function* characterGenerator(
 	allowedTypes: Array<new (level: number) => Character>,
@@ -99,7 +100,7 @@ export function movementRadius(position: number, radius: number, size: number) {
 }
 
 export function generatePositionedEnemies(boardSize: number) {
-	const enemy = [Bowman];
+	const enemy = [Daemon];
 	const countEnemy = 3;
 	const enemies = generateTeam(enemy, 4, countEnemy);
 	const positionsEnemy = range(boardSize - 2, boardSize * boardSize - boardSize, 8)

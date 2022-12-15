@@ -27,10 +27,7 @@ export default class GameController {
 		const { boardSize } = this.gamePlay;
 		this.positionedAllies = generatePositionedAllies(boardSize);
 		this.positionedEnemies = generatePositionedEnemies(boardSize);
-		this.positionedCharacters = this.positionedAllies.map((item) => item);
-		this.positionedEnemies.forEach((item) => {
-			this.positionedCharacters.push(item);
-		});
+		this.positionedCharacters = this.positionedAllies.concat(this.positionedEnemies)
 		this.userTeam = new Team(this.positionedAllies.map((positionedAlly) => positionedAlly.character));
 		this.gamePlay.redrawPositions(this.positionedCharacters);
 		this.gamePlay.addCellClickListener(this.onCellClick.bind(this));
